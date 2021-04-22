@@ -31,6 +31,33 @@ void Widget::on_pushButton_clicked()
     {
         qDebug()<<"Windows checkbox is Unchecked";
     }
+     if(ui->mac->isChecked())
+    {
+        qDebug()<<"Mac checkbox is checked";
+    }
+    else
+    {
+        qDebug()<<"Mac checkbox is Unchecked";
+    }
+     if(ui->linux->isChecked())
+    {
+        qDebug()<<"Linux checkbox is checked";
+    }
+    else
+    {
+        qDebug()<<"Linux checkbox is Unchecked";
+    }
+}
+void Widget::on_groupBox_2_clicked()
+{
+    if(ui->checkBox_4->isChecked())
+    {
+        ui->checkBox_4->setChecked(false);
+    }
+    else
+    {
+        ui->checkBox_4->setChecked(true);
+    }
 }
 
 void Widget::on_pushButton_2_clicked()
@@ -43,5 +70,16 @@ void Widget::on_pushButton_2_clicked()
     else
     {
         ui->windows->setChecked(true);
+    }
+}
+void Widget::on_windows_toggled(bool checked)
+{
+    if(checked)
+    {
+        qDebug()<<"Windows Checkbox is checked!";
+    }
+    else
+    {
+        qDebug()<<"Windows Checkbox is Unchecked!";
     }
 }
